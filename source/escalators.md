@@ -6,7 +6,6 @@ pagination:
 permalink: /escalators/{{ item.index}}/
 layout: base.html
 ---
-<!-- title: "PABT, I remember/No.{{ item.index}}" -->
 
 <!-- <h1>{{ item.name | default: 'Escalator' }}</h1> -->
 <div class="totalBox">
