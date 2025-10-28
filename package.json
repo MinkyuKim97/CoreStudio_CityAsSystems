@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "build": "eleventy --pathprefix=static-site-garden",
+    "build": "eleventy --pathprefix=CoreStudio_CityAsSystems",
     "serve": "eleventy --serve"
   },
   "dependencies": {
