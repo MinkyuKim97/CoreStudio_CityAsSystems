@@ -18,9 +18,9 @@ layout: base.html
 <!-- {% if prevIndex < 0 %}{% assign prevIndex = total | minus: 1 %}{% endif %} -->
 {% assign total = pagination.hrefs | default: "" | size %}
 {% if total > 0 %}
-  {% assign nextIndex = pagination.pageNumber | plus: 1 | modulo: total %}
-  {% assign prevIndex = pagination.pageNumber | minus: 1 %}
-  {% if prevIndex < 0 %}{% assign prevIndex = total | minus: 1 %}{% endif %}
+  <!-- {% assign nextIndex = pagination.pageNumber | plus: 1 | modulo: total %}
+  {% assign prevIndex = pagination.pageNumber | minus: 1 %} -->
+  {% assign nextIndex = pagination.pageNumber | plus: 1%}
 <nav class="pager" >
   <a id="nextBtn" href="{{ pagination.hrefs[nextIndex] }}" data-role="next">Next</a>
 </nav>
