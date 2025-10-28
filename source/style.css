@@ -1,0 +1,148 @@
+/* Add some CSS here */
+
+:root {
+    background-color: darkslategray;
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #080808;
+    margin: 0;
+    padding: 10px;
+    height: 100vh;
+}
+
+.coverDiv{
+    width: 100vw;
+    height: 100vh;
+    background-color: #080808;
+    position: fixed;
+    z-index: 100;
+    display: none;
+}
+nav{
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+}
+nav button{
+    font-size: 16pt;
+    background-color: #353535;
+    transition: all ease-in-out 0.3s;
+    border: none;
+}
+nav button:hover{
+    background-color: white;
+    cursor: pointer;
+
+}
+.totalBox{
+    width: 95vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    margin: 10px;
+}
+.imageSec{
+    width: 100%;
+    height: 100%;
+}
+.imageSec img{
+    width: 100%;    
+}
+
+.infoSec{
+    width: 100%;
+    height: 100%;
+    display: block;   
+}
+.dataBox{
+    background-color: #080808;
+    color: white;
+    padding: 10px;
+    border: solid 5px white;
+}
+.dataBox ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.dataBox ul li{
+    margin: 5px;
+    margin-bottom: 10px;
+}
+.dataBox ul li strong{
+    margin-right: 10px;
+} 
+.descriptionBox{
+    background-color: white;
+    color: #080808;
+    padding: 10px;
+    /* border: solid 5px #080808; */
+    word-break:keep-all;
+
+}
+.descriptionBox p{
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 16pt;
+}
+.descriptionBox p strong{
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.pager{
+    padding: 0;
+}
+
+#nextBtn{
+    margin: 0;
+    text-decoration: none;
+    width: 100%;
+    height: 50px;
+    background-color: #353535;
+    color: #080808;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 0.3s;
+}
+#nextBtn:hover{
+    background-color: white;
+}
+/* 
+
+.plant-icon {
+    position: relative;
+}
+
+.plant-icon img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.plant-icon span {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    background: green;
+    color: white;
+    padding: 5px;
+}
+
+.plant-profile {
+    width: 1000px;
+    display: flex;
+    margin: 20px auto;
+}
+
+.plant-profile img {
+    width: 600px;
+    margin-right: 20px;
+} */

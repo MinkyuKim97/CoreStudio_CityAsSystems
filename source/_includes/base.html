@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <header>
+    <nav>
+      <button id="btnConnect" type="button">USB Connect</button>
+      
+      <div id="navSerial" style="display:flex; gap:8px; align-items:center;"></div>
+  <button type="button" class="hit1"">S: Act</button>
+  <button type="button" class="hit2"">S: F</button>
+  <button type="button" class="hit3"">S: B</button>
+  <button type="button" class="hit4"">B: F(h)</button>
+  <button type="button" class="hit5"">B: B(h)</button>
+  </div>
+      <div
+        id="counterBadge"
+        style="
+          display: inline-block;
+          margin-left: 8px;
+          background: #353535;
+          color: #808080;
+          padding: 2px 8px;
+   
+        "
+      >
+        0
+      </div>
+      <!-- <a href="/">Home</a> -->
+      <!-- <a href="/escalators/0/">Escalators</a> -->
+    </nav>
+
+  </header>
+  <body>
+    <div class="coverDiv"></div>
+    {{ content }}
+  </body>
+</html>
+<script src="/script.js"></script>

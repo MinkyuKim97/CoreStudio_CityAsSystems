@@ -1,0 +1,9 @@
+---
+title: Welcome to our Garden
+---
+
+{% assign plants = collections.plant | sort:"data.title" %}
+{% for plant in plants %}
+{% include 'plant_icon.html' %}
+{% endfor %}
+<a href="/escalators/0/">Escalators</a>

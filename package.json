@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "eleventy --pathprefix=static-site-garden",
+    "serve": "eleventy --serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}
