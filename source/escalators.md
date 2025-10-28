@@ -7,7 +7,6 @@ permalink: /escalators/{{ item.index}}/
 title: "PABT, I remember/No.{{ item.index}}"
 layout: base.html
 ---
-<!-- eleventyComputed: -->
 
 <!-- <h1>{{ item.name | default: 'Escalator' }}</h1> -->
 <div class="totalBox">
