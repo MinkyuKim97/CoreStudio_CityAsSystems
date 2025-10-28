@@ -12,16 +12,16 @@ layout: base.html
 <div class="totalBox">
 
 <div class="imageSec">
-<img src="/imageFiles/Oct_22nd_000{{item.index}}.png"/>
-<!-- {% assign total = pagination.hrefs | size %}
-{% assign nextIndex = pagination.pageNumber | plus: 1 | modulo: total %}
-{% assign prevIndex = pagination.pageNumber | minus: 1 %}
-{% if prevIndex < 0 %}{% assign prevIndex = total | minus: 1 %}{% endif %} -->
+  <img src="/imageFiles/Oct_22nd_000{{item.index}}.png"/>
+  <!-- {% assign total = pagination.hrefs | size %}
+  {% assign nextIndex = pagination.pageNumber | plus: 1 | modulo: total %}
+  {% assign prevIndex = pagination.pageNumber | minus: 1 %}
+  {% if prevIndex < 0 %}{% assign prevIndex = total | minus: 1 %}{% endif %} -->
 
-<nav class="pager" >
-  <!-- <a id="nextBtn" href="{{ pagination.hrefs[nextIndex] }}" data-role="next">Next</a> -->
-  <a id="nextBtn" href="{{ pagination.hrefs[pagination.pageNumber | plus: 1] }}" data-role="next">Next</a>
-</nav>
+  <nav class="pager" >
+    <!-- <a id="nextBtn" href="{{ pagination.hrefs[nextIndex] }}" data-role="next">Next</a> -->
+    <!-- <a id="nextBtn" href="{{ pagination.hrefs[pagination.pageNumber | plus: 1] }}" data-role="next">Next</a> -->
+  </nav>
 
 </div>
 
