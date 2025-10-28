@@ -10,15 +10,15 @@ layout: base.html
 
 <!-- <h1>{{ item.name | default: 'Escalator' }}</h1> -->
 <div class="totalBox">
+  {% assign nextIndex = pagination.pageNumber | plus: 1 %}
+  {% if nextIndex >= pagination.pageCount %}
+    {% assign nextIndex = 0 %}
+  {% endif %}
 
 <div class="imageSec">
   <img src="/imageFiles/Oct_22nd_000{{item.index}}.png"/>
   <nav class="pager" >
-  {% assign nextIndex = pagination.pageNumber | plus: 1 %}
-{% if nextIndex >= pagination.pageCount %}
-  {% assign nextIndex = 0 %}
-{% endif %}
-    <a id="nextBtn" href="{{ pagination.hrefs[nextIndex] }}">Next</a>
+    <a id="nextBtn" data-role="next" href="{{ pagination.hrefs[nextIndex] }}">Next</a>
   </nav>
 
 </div>
