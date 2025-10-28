@@ -14,7 +14,11 @@ layout: base.html
 <div class="imageSec">
   <img src="/imageFiles/Oct_22nd_000{{item.index}}.png"/>
   <nav class="pager" >
-    <a id="nextBtn" href="{{ pagination.hrefs[pagination.pageNumber | plus: 1] }}" data-role="next">Next</a>
+  {% assign nextIndex = pagination.pageNumber | plus: 1 %}
+{% if nextIndex >= pagination.pageCount %}
+  {% assign nextIndex = 0 %}
+{% endif %}
+    <a id="nextBtn" href="{{ pagination.hrefs[nextIndex] }}">Next</a>
   </nav>
 
 </div>
