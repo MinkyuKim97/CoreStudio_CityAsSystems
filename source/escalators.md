@@ -12,14 +12,22 @@ layout: base.html
 
 <div class="imageSec">
 <img src="/imageFiles/Oct_22nd_000{{item.index}}.png"/>
-{% assign total = pagination.hrefs | size %}
-{% assign nextIndex = pagination.pageNumber | plus: 1 | modulo: total %}
-{% assign prevIndex = pagination.pageNumber | minus: 1 %}
-{% if prevIndex < 0 %}{% assign prevIndex = total | minus: 1 %}{% endif %}
-
+<!-- {% assign total = pagination.hrefs | size %} -->
+<!-- {% assign nextIndex = pagination.pageNumber | plus: 1 | modulo: total %} -->
+<!-- {% assign prevIndex = pagination.pageNumber | minus: 1 %} -->
+<!-- {% if prevIndex < 0 %}{% assign prevIndex = total | minus: 1 %}{% endif %} -->
+{% assign total = pagination.hrefs | default: "" | size %}
+{% if total > 0 %}
+  {% assign nextIndex = pagination.pageNumber | plus: 1 | modulo: total %}
+  {% assign prevIndex = pagination.pageNumber | minus: 1 %}
+  {% if prevIndex < 0 %}{% assign prevIndex = total | minus: 1 %}{% endif %}
 <nav class="pager" >
   <a id="nextBtn" href="{{ pagination.hrefs[nextIndex] }}" data-role="next">Next</a>
 </nav>
+
+  <!-- <a href="{{ pagination.hrefs[prevIndex] }}">Prev</a>
+  <a href="{{ pagination.hrefs[nextIndex] }}">Next</a> -->
+{% endif %}
 
 </div>
 
