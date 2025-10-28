@@ -1,11 +1,11 @@
 ---
 pagination:
   data: escalators
-  size: 1 # 한 페이지에 하나(= 한 행)
-  alias: item # 항목을 item으로 참조
+  size: 1
+  alias: item 
 permalink: /escalators/{{ item.index}}/
 eleventyComputed:
-  title: "{{ item.name | default: 'Escalator' }}"
+  title: "PABT, I remember/No.{{ item.index}}"
 layout: base.html
 ---
 

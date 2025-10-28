@@ -127,14 +127,13 @@ const setDir  = (v) => sessionStorage.setItem(DIR_KEY, v ? "true" : "false")
     }
   }
 
-const coverDiv = document.querySelector('.coverDiv');
+// const coverDiv = document.querySelector('.coverDiv');
 async function sendCommandAndWaitThenGo(cmd, url) {
   const donePromise = Serial.waitForLine("DONE", 60000);
   // coverDiv.style.display ="block";
   await Serial.sendLine(cmd);
   await donePromise;   
   window.location.href = url;
-  coverDiv.style.display ="none";
 }
 
 
@@ -175,4 +174,13 @@ async function sendCommandAndWaitThenGo(cmd, url) {
     get: () => Counter.get(),
     reset: () => Counter.reset(),
   };
+
+  window.addEventListener('load', () => {
+    const coverDiv = document.querySelector('.coverDiv');
+    coverDiv.style.display = 'flex';    
+    setTimeout(() => {
+          coverDiv.style.display = 'none';
+    }, 2000);
+  });
+    
 })();
