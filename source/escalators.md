@@ -4,6 +4,7 @@ pagination:
   size: 1
   alias: item 
 permalink: /escalators/{{ item.index}}/
+title: "PABT, I remember/No.{{ item.index}}"
 layout: base.html
 ---
 
@@ -12,22 +13,15 @@ layout: base.html
 
 <div class="imageSec">
 <img src="/imageFiles/Oct_22nd_000{{item.index}}.png"/>
-<!-- {% assign total = pagination.hrefs | size %} -->
-<!-- {% assign nextIndex = pagination.pageNumber | plus: 1 | modulo: total %} -->
-<!-- {% assign prevIndex = pagination.pageNumber | minus: 1 %} -->
-<!-- {% if prevIndex < 0 %}{% assign prevIndex = total | minus: 1 %}{% endif %} -->
-{% assign total = pagination.hrefs | default: "" | size %}
-{% if total > 0 %}
-  <!-- {% assign nextIndex = pagination.pageNumber | plus: 1 | modulo: total %}
-  {% assign prevIndex = pagination.pageNumber | minus: 1 %} -->
-  {% assign nextIndex = pagination.pageNumber | plus: 1%}
-<nav class="pager" >
-  <a id="nextBtn" href="{{ pagination.hrefs[nextIndex] }}" data-role="next">Next</a>
-</nav>
+<!-- {% assign total = pagination.hrefs | size %}
+{% assign nextIndex = pagination.pageNumber | plus: 1 | modulo: total %}
+{% assign prevIndex = pagination.pageNumber | minus: 1 %}
+{% if prevIndex < 0 %}{% assign prevIndex = total | minus: 1 %}{% endif %} -->
 
-  <!-- <a href="{{ pagination.hrefs[prevIndex] }}">Prev</a>
-  <a href="{{ pagination.hrefs[nextIndex] }}">Next</a> -->
-{% endif %}
+<nav class="pager" >
+  <!-- <a id="nextBtn" href="{{ pagination.hrefs[nextIndex] }}" data-role="next">Next</a> -->
+  <a id="nextBtn" href="{{ pagination.hrefs[pagination.pageNumber | plus: 1] }}" data-role="next">Next</a>
+</nav>
 
 </div>
 
