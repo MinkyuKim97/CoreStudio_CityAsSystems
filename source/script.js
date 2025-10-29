@@ -1,5 +1,8 @@
 
 (function () {
+  //Adjust for changing Rotate Mix Threshold
+  const rotateMixThreshold = 30;
+
   const KEY = "navCount";
   const badge = document.getElementById("counterBadge");
   const btnConnect = document.getElementById("btnConnect");
@@ -118,7 +121,7 @@ const setDir  = (v) => sessionStorage.setItem(DIR_KEY, v ? "true" : "false")
   async function handleCountAndHooks(url) {
     Counter.inc();
     const n = Counter.get();
-    if (n < 6) {
+    if (n < rotateMixThreshold) {
       await functionOne(); 
       window.location.href = url;  
     }else{
